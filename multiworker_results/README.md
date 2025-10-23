@@ -4,7 +4,15 @@
 
 Testing memory efficiency and cache performance across different cache architectures and worker assignment strategies for a trading strategy execution engine.
 
-**Main Test File**: `multiworker_test.py`
+**Main Test File**: `../multiworker_test.py`
+
+**Key Dependencies**:
+- `../src/worker_manager.py` - Worker process execution & real-time testing loop
+- `../src/load_strategies.py` - Strategy generation with controlled instrument distribution
+- `../src/strategies.py` - Strategy implementations (momentum, mean reversion, etc.)
+- `../src/data_services.py` - 3-tier cache implementation (memory + Redis)
+- `../src/shared_cache.py` - Shared memory cache using multiprocessing.Manager()
+- `../src/mock_data_service.py` - Mock data provider for testing
 
 ## Test Setup
 
